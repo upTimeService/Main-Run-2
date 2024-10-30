@@ -25,8 +25,8 @@ let fontlink = 'https://drive.google.com/u/0/uc?id=1ZwFqYB-x6S9MjPfYm3t3SP1joohG
 module.exports.run = async function({ api, event, Users, Threads }) {
   const leftParticipantFbId = event.logMessageData.leftParticipantFbId;
   const name = global.data.userName.get(leftParticipantFbId) || await Users.getNameUser(leftParticipantFbId);
-  const type = (event.author == leftParticipantFbId) ? "পাখিটা উড়ে গেলো😑😑" : "এডমিন লাথি মারলো";
-  const Yan = (event.author == leftParticipantFbId) ? "পাখিটা উড়ে গেলো😑" : " এডমিন লাথি মারলো";
+  const type = (event.author == leftParticipantFbId) ? "-লিভ নিয়ে চলে গেলো👀" : "-রে এডমিন লাথি মারলো";
+  const Yan = (event.author == leftParticipantFbId) ? "Good Bye Baby" : "Good Bye Baby";
 
   let fontPath = path.join(__dirname, "cache", "font.ttf");
   let font = (await axios.get(fontlink, { responseType: 'arraybuffer' })).data;
@@ -62,7 +62,7 @@ module.exports.run = async function({ api, event, Users, Threads }) {
   fs.writeFileSync(path.join(__dirname, 'cache/leave/leave.png'), finalImage);
 
   const formPush = {
-    body: `💥${name} has ${type} from the group`,
+    body: `[🤍] ${name}${type} `,
     attachment: fs.createReadStream(path.join(__dirname, 'cache/leave/leave.png'))
   };
 

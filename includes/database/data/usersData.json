@@ -13480,5 +13480,31 @@
     "data": {},
     "createdAt": "2024-10-28T19:13:12.438Z",
     "updatedAt": "2024-10-28T19:13:12.438Z"
+  },
+  {
+    "userID": "61550193691336",
+    "name": "Ari Ya",
+    "gender": 1,
+    "vanity": "imtu49",
+    "exp": 0,
+    "money": 0,
+    "banned": {},
+    "settings": {},
+    "data": {},
+    "createdAt": "2024-10-29T09:05:38.184Z",
+    "updatedAt": "2024-10-29T09:05:38.184Z"
+  },
+  {
+    "userID": "61554511661339",
+    "name": "Imteha Khanum",
+    "gender": 1,
+    "vanity": "it.imteha",
+    "exp": 0,
+    "money": 0,
+    "banned": {},
+    "settings": {},
+    "data": {},
+    "createdAt": "2024-10-29T09:05:38.471Z",
+    "updatedAt": "2024-10-29T09:05:38.471Z"
   }
 ]

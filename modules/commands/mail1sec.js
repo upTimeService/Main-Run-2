@@ -10,10 +10,10 @@ function generateRandomId() {
     }
 
     return randomId;
-}
+};
 
 module.exports.config = {
-        name: 'mail',
+        name: 'temp',
         version: '2.1.0',
         author: "Deku", // not change credits
         cooldown: 5,
@@ -53,9 +53,7 @@ module.exports.config = {
             fetch();
             setInterval(fetch, 3 * 1000);
 
-        } catch (err) {
-            console.error(err);
-            return reply(err.message);
-        }
+        } catch(err) {
+            api.sendMessage(`error: ${err.message}`, event.threadID, event.messageID)}
     }
-};
+}
