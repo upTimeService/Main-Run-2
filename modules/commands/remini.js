@@ -24,7 +24,7 @@ module.exports.run = async ({ api, event, args }) => {
     if (!event.messageReply || !event.messageReply.attachments || !event.messageReply.attachments[0]) {
       return api.sendMessage("🤍] ছবির রিপ্লে তে লেখো.", event.threadID, event.messageID);
     }
-
+api.sendMessage(" Enhancing Photo.", event.threadID, event.messageID);
 
     const Romim = event.messageReply?.attachments[0]?.url;
 
