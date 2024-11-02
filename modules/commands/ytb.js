@@ -10,7 +10,7 @@ const baseApiUrl = async () => {
 
 module.exports = {
     config: {
-        name: "video",
+        name: "yt",
         version: "1.1.4",
         credits: "dipto",
         countDown: 5,
