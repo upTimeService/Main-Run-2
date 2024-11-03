@@ -10,7 +10,7 @@ module.exports.config = {
   version: "1.0.0",
   permission: 0,
   credits: "ryuko",
-  usePrefix: true,
+  usePrefix: false,
   description: "create a new post in acc bot",
   commandCategory: "simr",
   cooldowns: 2,
@@ -23,7 +23,7 @@ module.exports.run = async function ({ api, event, args, Users }) {
     const uid = event.senderID;
 
     if (!args[0]) {
-      const ran = ["তোমার অইখানে উমম্মাহ💋🙈🙂🤐", "মানুষ কতটা অসহায় হলে বট বট করে🙂💔", " উমম্মম্মাহহহহ্ সোনা😽", "type: bot alabio", "আমি বট, তুমি হট 🫦🥵💋🙂", " চিপায় আসো ব্যাপ্স🫦🥵"];
+      const ran = ["তোমার অইখানে উমম্মাহ💋🙈🙂🤐", "মানুষ কতটা অসহায় হলে বট বট করে🙂💔", " উমম্মম্মাহহহহ্ সোনা😽", "type: janu alabio", "আমি বট, তুমি হট 🫦🥵💋🙂", " চিপায় আসো ব্যাপ্স🫦🥵"];
       const r = ran[Math.floor(Math.random() * ran.length)];
       return api.sendMessage(r, event.threadID, event.messageID);
     }
