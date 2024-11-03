@@ -3,7 +3,7 @@ module.exports.config = {
   version: "1.0.0",
   permission: 0,
   credits: "Hamim",
-  usePrefix: false,
+  usePrefix: true,
   description: "guide",
   commandCategory: "system",
   premium: false,
@@ -20,7 +20,7 @@ module.exports.handleEvent = async ({ event, api, Threads }) => {
   var data = dataThread.data; 
   const threadSetting = global.data.threadData.get(parseInt(threadID)) || {};
 
-  var arr = ["bot","mprefix","prefix", "!", "/","PREFIX"];
+  var arr = ["ok","mprefix","prefix", "!", "/","PREFIX"];
   arr.forEach(i => {
     let str = i[0].toUpperCase() + i.slice(1);
     if (body === i.toUpperCase() | body === i | str === body) {
