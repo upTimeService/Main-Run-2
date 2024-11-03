@@ -54,7 +54,7 @@ async function onStart({
 }) {
     try {
         const songName = args.join(' ');
-        const w = await api.sendMessage(`[🔎] 「"${songName}"」 𝘚𝘦𝘢𝘳𝘤𝘩𝘪𝘯𝘨...\[🤍] 𝘗𝘭𝘦𝘢𝘴𝘦 𝘸𝘢𝘪𝘵 𝘧𝘦𝘸 𝘴𝘦𝘤𝘰𝘯𝘥. `, event.threadID);
+        const w = await api.sendMessage(`[🔎]「"${songName}"」- 𝘚𝘦𝘢𝘳𝘤𝘩𝘪𝘯𝘨...\n[🤍] 𝘗𝘭𝘦𝘢𝘴𝘦 𝘸𝘢𝘪𝘵 𝘧𝘦𝘸 𝘴𝘦𝘤𝘰𝘯𝘥. `, event.threadID);
         const r = await yts(songName);
         const videos = r.videos.slice(0, 50);
 
