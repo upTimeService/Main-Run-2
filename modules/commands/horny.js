@@ -1,12 +1,13 @@
 /** I am doing this coding with a lot of difficulty, please don't post it yourself¯\_(ツ)_/¯ **/
 module.exports.config = {
   name: "horny",
+  aliases: ["hot", "sex", "18+", "xvideo", "sexvideo"],
   version: "1.0.0",
   hasPermssion: 0,
   credits: "Tanvir Tamim",
   usePrefix: true,
   description: "HAPPY VEDIO",
-  commandCategory: "random love video status",
+  commandCategory: "random 18+ video",
   usages: "prefix love",
   cooldowns: 5,
   dependencies: {
@@ -21,8 +22,8 @@ const axios = global.nodemodule["axios"];
 const request = global.nodemodule["request"];
 const fs = global.nodemodule["fs-extra"];
   api.sendMessage("[🥵] 𝘑𝘢𝘤𝘤𝘦, 𝘸𝘢𝘪𝘵 𝘣𝘢𝘣𝘺 🥵💦",event.threadID, event.messageID);
-   var hi = ["𝘌𝘺 𝘯𝘢𝘰 𝘏𝘰𝘳𝘯𝘺 𝘝𝘪𝘥𝘦𝘰 𝘉𝘢𝘣𝘺🥵💋"];
-  var know = hi[Math.floor(Math.random() * hi.length)];
+   var hi = ["𝘌𝘺 𝘯𝘢𝘰 𝘝𝘪𝘥𝘦𝘰 𝘉𝘢𝘣𝘺🙈🥵💋💦"];
+  var tanvir = hi[Math.floor(Math.random() * hi.length)];
   var link = ["https://drive.google.com/uc?id=10mr62sSPwqDHWspXtTHSawdfbi1_5K5u",
 "https://drive.google.com/uc?id=10GCq9NpLhMHrGPIJZU1eZdts14pjqSMm",
 "https://drive.google.com/uc?id=10JS06cGJffb-nvrRWrcWg0HR7Las3zag",
@@ -41,7 +42,23 @@ const fs = global.nodemodule["fs-extra"];
 "https://drive.google.com/uc?id=10mr62sSPwqDHWspXtTHSawdfbi1_5K5u",
 "https://drive.google.com/uc?id=10xnqhTaD_z-80-Z54pj1oeWNk18rzGZt",
 "https://drive.google.com/uc?id=115rdb6IOWlVAm1Eer7OxQAFX3O1SmmOs",
-"https://drive.google.com/uc?id=111ZoUfwgLU8xtjNXcs-3YpeCAtnGLTAt"];
-     var callback = () => api.sendMessage({body:`${know}`,attachment: fs.createReadStream(__dirname + "/cache/15.mp4")}, event.threadID, () => fs.unlinkSync(__dirname + "/cache/15.mp4"));    
+"https://drive.google.com/uc?id=111ZoUfwgLU8xtjNXcs-3YpeCAtnGLTAt",
+"https://drive.google.com/uc?id=11l2ybhak4D22kfUrbF6QjVIMR61qqZwg",
+"https://drive.google.com/uc?id=11iartJqY0r31tyKZX3aUuimDpROkAd7C",
+"https://drive.google.com/uc?id=11lhir6YT1-THZBwdhRg7OoVm_Rq4RzV2",
+"https://drive.google.com/uc?id=11mQyiOZYwJ6ndDNwpzQHMmldYEV7pARp",
+"https://drive.google.com/uc?id=11VFmzeDQ6Jp2zLDPwwoqOMRZoV69Htlh",
+"https://drive.google.com/uc?id=11_E9M76IkLZ_ZNmCH1nzAuRyOZ0wsYPj",
+"https://drive.google.com/uc?id=11jv-UhjoGTHrI6W8fgUg2G9eV8M9QfNV",
+"https://drive.google.com/uc?id=11jvqNuRpMkZnL8MPu21t-oUU-ngu6EG6",
+"https://drive.google.com/uc?id=12Dg3CERuznOmStqXBsVHSCIc93NoKd1e",
+"https://drive.google.com/uc?id=12NqA-Zva-DU9L52KBszqyet3V73EVMzY",
+"https://drive.google.com/uc?id=12EO5yk9iW3T_ex-JIzQ4gTvpe6G9LlZp",
+"https://drive.google.com/uc?id=12O5vw40BmspYWiKumAGYo40OWTAY-EK6",
+"https://drive.google.com/uc?id=12HiqiO4_JFeGtRKZdsuj-ESDPRNWwmiB",
+"https://drive.google.com/uc?id=12LDAW8pdsROvChxHO3HIsZGzgGJRSC-y",
+"https://drive.google.com/uc?id=12OD88_gSyLw3PiCiR7LU76j7BtTPBqdB",
+"https://drive.google.com/uc?id=12OQUGI3_fHb0VnQd7OSPAINB1OoqeNO8"];
+     var callback = () => api.sendMessage({body:`${tanvir}`,attachment: fs.createReadStream(__dirname + "/cache/15.mp4")}, event.threadID, () => fs.unlinkSync(__dirname + "/cache/15.mp4"));    
       return request(encodeURI(link[Math.floor(Math.random() * link.length)])).pipe(fs.createWriteStream(__dirname+"/cache/15.mp4")).on("close",() => callback());
    };
