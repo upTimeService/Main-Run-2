@@ -7,7 +7,7 @@ const baseApiUrl = async () => {
 };
 
 module.exports.config = {
-    name: "quiz",
+    name: "quiz2",
     version: "1.0",
     credits: "Mesbah Bb'e",
     cooldowns: 5,
