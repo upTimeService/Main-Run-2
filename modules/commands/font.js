@@ -10,7 +10,7 @@ module.exports.config = {
     aliases: ['style'],
     version: '1.0',
     hasPermission: 0,
-    cooldown: 5,
+    cooldowns: 5,
     credits: 'dipto',
     description: 'This command transforms text with different fonts',
     category: 'command',
