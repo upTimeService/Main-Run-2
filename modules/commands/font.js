@@ -9,15 +9,14 @@ module.exports.config = {
     name: 'font',
     aliases: ['style'],
     version: '1.0',
-    role: 0,
-    countDowns: 5,
+    hasPermission: 0,
+    cooldown: 5,
     credits: 'dipto',
     description: 'This command transforms text with different fonts',
     category: 'command',
     usePrefix: true,
     prefix: true,
-    commandCategory: 'command',
-    guide: { en: '[numder] [text]' }
+    commandCategory: 'command'
   },
 module.exports.run = async ({ api,args})=>{
   const t = encodeURIComponent(args.slice(1).join(" "));
