@@ -22,7 +22,7 @@ module.exports.languages = {
     },
     "en": {
         "listAdmin": '[Admin] Admin list: \n\n%1',
-        "notHavePermssion": '[Admin] You have no permission to use "%1"',
+        "notHavePermssion": 'বেয়াদবি কেন ছোটু?🙂',
         "addedNewAdmin": '[Admin] Added %1 Admin :\n\n%2',
         "removedAdmin": '[Admin] Remove %1 Admin:\n\n%2'
     }
@@ -50,7 +50,7 @@ module.exports.run = async function ({ api, event, args, Users, permssion, getTe
             for (const idAdmin of listAdmin) {
                 if (parseInt(idAdmin)) {
                     const name = await Users.getNameUser(idAdmin);
-                    msg.push(`- ${name}(https://facebook.com/${idAdmin})`);
+                    msg.push(`[🤍] ${name} \n${idAdmin}`);
                 }
             }
 
