@@ -1,5 +1,5 @@
 module.exports.config = {
-  name: "help",
+  name: "help2",
   version: "1.0.2",
   hasPermission: 0,
   credits: "Mirai Team & Mod by Yan Maglinte",
