@@ -29,7 +29,7 @@ api.sendMessage(" Enhancing Photo.", event.threadID, event.messageID);
     const Romim = event.messageReply?.attachments[0]?.url;
 
 
-    const apiUrl = (`https://www.x-noobs-api.000.pe/remini?input=${encodeURIComponent(Romim)}`);
+    const apiUrl = (`${await baseApiUrl()}/remini?input=${encodeURIComponent(Romim)}`);
 
 
     const imageStream = await axios.get(apiUrl,{
