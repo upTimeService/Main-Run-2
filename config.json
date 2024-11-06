@@ -92,5 +92,9 @@
   "menu": {
     "autoUnsend": true,
     "delayUnsend": 60
+  },
+  "help2": {
+    "autoUnsend": true,
+    "delayUnsend": 60
   }
 }
