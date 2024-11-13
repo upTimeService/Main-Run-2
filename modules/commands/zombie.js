@@ -9,7 +9,7 @@ const baseApiUrl = async () => {
 module.exports.config = {
   name: "zombie",
   aliases: ["zom", "zombi", "jombi", "jombie", "jom"],
-  category: "enhanced",
+  category: "zombiePic",
   category: " remini",
   prefix: true,
   usePrefix: true,
@@ -24,7 +24,7 @@ module.exports.run = async ({ api, event, args }) => {
     if (!event.messageReply || !event.messageReply.attachments || !event.messageReply.attachments[0]) {
       return api.sendMessage("🤍] ছবির রিপ্লে তে লেখো.", event.threadID, event.messageID);
     }
-api.sendMessage("[📸] 𝘱𝘩𝘰𝘵𝘰 𝘦𝘥𝘪𝘵𝘪𝘯𝘨...", event.threadID, event.messageID);
+api.sendMessage("[✅] 𝘱𝘭𝘦𝘢𝘴𝘦 𝘸𝘢𝘪𝘵 𝘧𝘦𝘸 𝘴𝘦𝘤𝘰𝘯𝘥.", event.threadID, event.messageID);
 
     const Romim = event.messageReply?.attachments[0]?.url;
 
