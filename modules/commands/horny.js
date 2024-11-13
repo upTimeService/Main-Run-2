@@ -14,7 +14,7 @@ const axios = require("axios");
 const tanvir143 = args.join(" ");
          try {
       api.sendMessage("[🥵] 𝘍𝘪𝘯𝘥𝘪𝘯𝘨 𝘩𝘰𝘳𝘯𝘺 𝘷𝘪𝘥𝘦𝘰...",event.threadID, event.messageID);
-      const {data} = await axios.get(`https://joshweb.click/aigen?prompt=${tanvir143}`)
+      const {data} = await axios.get(`https://www.noobz-api.000.pe/Romim/hornypic`)
       const tanvir = data.data;
       const stream = await axios.get(tanvir,{responseType: "stream"})
          api.sendMessage({attachment:stream.data}, event.threadID, event.messageID);
