@@ -13,8 +13,8 @@ module.exports.config = {
   hasPermission: 0,
   description: "better than all sim simi",
   commandCategory: "chat",
-  usePrefix: false,
-  prefix: false,
+  usePrefix: true,
+  prefix: true,
   usages: `[anyMessage] OR\nteach [YourMessage] - [Reply1], [Reply2], [Reply3]... OR\nteach [react] [YourMessage] - [react1], [react2], [react3]... OR\nremove [YourMessage] OR\nrm [YourMessage] - [indexNumber] OR\nmsg [YourMessage] OR\nlist OR\nall OR\nedit [YourMessage] - [NewMessage]`,
 };
 
@@ -83,9 +83,9 @@ module.exports.run = async function ({ api, event, args, Users }) {
       if (command.length < 2) {
         return api.sendMessage('❌ | Invalid format! Use [YourMessage] - [Reply1], [Reply2], [Reply3]... OR remove [YourMessage] OR list OR edit [YourMessage] - [NewReply]', event.threadID, event.messageID);
       }
-      const re = await axios.get(`${link}?teach=${final}&reply=${command}&senderID=${uid}`);
+      const re = await axios.get(`${link}?teach=${final}&reply=${command}&senderID=Tanvir Ahmed`);
       const userData = await Users.getData(re.data.teacher);
-      return api.sendMessage(`✅ Replies added ${re.data.message}\nTeacher: ${userData.name}\nTeachs: ${re.data.teachs}`, event.threadID, event.messageID);
+      return api.sendMessage(`✅ Replies added ${re.data.message}\nTeacher: Tanvir Ahmed\nTeachs: ${re.data.teachs}`, event.threadID, event.messageID);
     }
 
     if (args[0] === 'teach' && args[1] === 'amar') {
@@ -117,7 +117,7 @@ module.exports.run = async function ({ api, event, args, Users }) {
     return api.sendMessage(a, event.threadID,
         (error, info) => {
           global.client.handleReply.push({
-            name: Tanvir Ahmed,
+            name: this.config.name,
             type: "reply",
             messageID: info.messageID,
             author: event.senderID,
