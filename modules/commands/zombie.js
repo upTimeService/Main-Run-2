@@ -1,29 +1,48 @@
 const axios = require("axios");
 
-      module.exports.config = {
-      name: "zombie",
-      aliases: ["zom", "zombi", "jombi", "jombie", "jom"],
-      author: "Tanvir Tanim", 
-      commandCategory: "img edit",
-      category: "zombie",
-      prefix: true, 
-      usePrefix: true,
-      hasPermssion: 0,
+const baseApiUrl = async () => {
+  const base = await axios.get(
+    `https://raw.githubusercontent.com/Blankid018/D1PT0/main/baseApiUrl.json`
+  );
+  return base.data.api;
+};
+module.exports.config = {
+  name: "zombie",
+  aliases: ["zom", "zombi", "jombi", "jombie", "jom"],
+  category: "enhanced",
+  category: " remini",
+  prefix: true,
+  usePrefix: true,
+  commandCategory: "no",
+  permission: 0,
+  author: "Romim"
+};
 
-      };
-      module.exports.run = async function ({api, event, args }) {
-const tanvir143 = args.join(" ");
-         try {
-      if (!tanvir143) return api.sendMessage("[🤍] 𝘱𝘳𝘰𝘷𝘪𝘥𝘦 𝘺𝘰𝘶𝘳 𝘱𝘳𝘰𝘮𝘰𝘵𝘦",event.threadID, event.messageID);
-      api.sendMessage("[🤍] 𝘐𝘮𝘢𝘨𝘦 𝘨𝘦𝘯𝘦𝘳𝘢𝘵𝘪𝘯𝘨,  𝘸𝘢𝘪𝘵...",event.threadID, event.messageID);
-      const {data} = await axios.get(`https://joshweb.click/aigen?prompt=${tanvir143}`)
-      const tanvir = data.result;
-      const stream = await axios.get(tanvir,{responseType: "stream"})
-         api.sendMessage({attachment:stream.data}, event.threadID, event.messageID);
+module.exports.run = async ({ api, event, args }) => {
+  try {
 
-      }
-   catch(err) {
-      api.sendMessage(`error:  ${err.message}`,event.threadID, event.messageID)
+    if (!event.messageReply || !event.messageReply.attachments || !event.messageReply.attachments[0]) {
+      return api.sendMessage("🤍] ছবির রিপ্লে তে লেখো.", event.threadID, event.messageID);
+    }
+api.sendMessage("[📸] 𝘱𝘩𝘰𝘵𝘰 𝘦𝘥𝘪𝘵𝘪𝘯𝘨...", event.threadID, event.messageID);
 
-   }
-        }
+    const Romim = event.messageReply?.attachments[0]?.url;
+
+
+    const apiUrl = (`https://c-v5.onrender.com/image2zombie?url=${encodeURIComponent(Romim)}`);
+
+
+    const imageStream = await axios.get(apiUrl,{
+      responseType: 'stream'
+    });
+
+
+    api.sendMessage({
+      body: "[🤍] 𝘱𝘩𝘰𝘵𝘰 𝘦𝘥𝘪𝘵𝘦𝘥 𝘴𝘶𝘤𝘤𝘦𝘴𝘴𝘧𝘶𝘭",
+      attachment: imageStream.data
+    }, event.threadID, event.messageID);
+
+  } catch (e) {
+    api.sendMessage(`Error: ${e.message}`, event.threadID, event.messageID);
+  }
+};
