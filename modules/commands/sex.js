@@ -1,7 +1,7 @@
 /** I am doing this coding with a lot of difficulty, please don't post it yourself¯\_(ツ)_/¯ **/
 module.exports.config = {
-  name: "horny",
-  aliases: ["hot", "sex", "18+", "xvideo", "sexvideo"],
+  name: "sexbd",
+  aliases: ["xnxx", "sex", "18+", "xvideo", "sexvideo", " fuck"],
   version: "1.0.0",
   hasPermssion: 0,
   credits: "Tanvir Tamim",
