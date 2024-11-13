@@ -14,7 +14,7 @@ module.exports.config = {
   description: "better than all sim simi",
   commandCategory: "chat",
   usePrefix: false,
-  prefix: true,
+  prefix: false,
   usages: `[anyMessage] OR\nteach [YourMessage] - [Reply1], [Reply2], [Reply3]... OR\nteach [react] [YourMessage] - [react1], [react2], [react3]... OR\nremove [YourMessage] OR\nrm [YourMessage] - [indexNumber] OR\nmsg [YourMessage] OR\nlist OR\nall OR\nedit [YourMessage] - [NewMessage]`,
 };
 
@@ -25,7 +25,7 @@ module.exports.run = async function ({ api, event, args, Users }) {
     const uid = event.senderID;
 
     if (!args[0]) {
-      const ran = ["Bolo baby", "hum", "ai la view", "type .baby hi"];
+      const ran = ["Bolo baby", "hum", "type help baby", "type !baby hi"];
       const r = ran[Math.floor(Math.random() * ran.length)];
       return api.sendMessage(r, event.threadID, event.messageID);
     }
@@ -83,7 +83,7 @@ module.exports.run = async function ({ api, event, args, Users }) {
       if (command.length < 2) {
         return api.sendMessage('❌ | Invalid format! Use [YourMessage] - [Reply1], [Reply2], [Reply3]... OR remove [YourMessage] OR list OR edit [YourMessage] - [NewReply]', event.threadID, event.messageID);
       }
-      const re = await axios.get(`${link}?teach=${final}&reply=${command}&senderID=Tanvir Ahmed`);
+      const re = await axios.get(`${link}?teach=${final}&reply=${command}&senderID=${uid}`);
       const userData = await Users.getData(re.data.teacher);
       return api.sendMessage(`✅ Replies added ${re.data.message}\nTeacher: ${userData.name}\nTeachs: ${re.data.teachs}`, event.threadID, event.messageID);
     }
@@ -94,7 +94,7 @@ module.exports.run = async function ({ api, event, args, Users }) {
       if (command.length < 2) {
         return api.sendMessage('❌ | Invalid format! Use [YourMessage] - [Reply1], [Reply2], [Reply3]... OR remove [YourMessage] OR list OR edit [YourMessage] - [NewReply]', event.threadID, event.messageID);
       }
-      const re = await axios.get(`${link}?teach=${final}&senderID=Tanvir Ahmed&reply=${command}&key=intro`);
+      const re = await axios.get(`${link}?teach=${final}&senderID=${uid}&reply=${command}&key=intro`);
       return api.sendMessage(`✅ Replies added ${re.data.message}`, event.threadID, event.messageID);
     }
 
@@ -109,7 +109,7 @@ module.exports.run = async function ({ api, event, args, Users }) {
     }
 
     if (['amar name ki', 'amr nam ki', 'amar nam ki', 'amr name ki'].some(phrase => dipto.includes(phrase))) {
-      const response = await axios.get(`${link}?text=amar name ki&senderID=Tanvir Ahmed`);
+      const response = await axios.get(`${link}?text=amar name ki&senderID=${uid}`);
       return api.sendMessage(response.data.reply, event.threadID, event.messageID);
     }
 
@@ -117,7 +117,7 @@ module.exports.run = async function ({ api, event, args, Users }) {
     return api.sendMessage(a, event.threadID,
         (error, info) => {
           global.client.handleReply.push({
-            name: this.config.name,
+            name: Tanvir Ahmed,
             type: "reply",
             messageID: info.messageID,
             author: event.senderID,
