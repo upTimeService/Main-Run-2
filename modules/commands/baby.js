@@ -6,7 +6,7 @@ const baseApiUrl = async () => {
 };
 
 module.exports.config = {
-  name: "bby",
+  name: "baby",
   version: "6.9.0",
   credits: "dipto",
   cooldowns: 0,
