@@ -3,7 +3,7 @@ module.exports.config = {
   name: "sexbd",
   aliases: ["xnxx", "sex", "18+", "xvideo", "sexvideo", " fuck"],
   version: "1.0.0",
-  hasPermssion: 0,
+  hasPermssion: 1,
   credits: "Tanvir Tamim",
   usePrefix: true,
   description: "HAPPY VEDIO",
