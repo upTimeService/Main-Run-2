@@ -159,7 +159,7 @@ module.exports = {
         process.stderr.write(chalk.hex("#ff0000")(`\r[ SYSTEM ] `) + data + '\n');
         break;
       default:
-        console.log(getThemeColors().co(`[ SYSTEM ]`), data);
+        console.log(getThemeColors().co(`[ TANVIR-BOT ]`), data);
         break;
     }
   }
