@@ -36,7 +36,7 @@ module.exports.run = async ({ api, args, event }) => {
     //---------- Message Reply ---------//
     else if (!prompt) {
       return api.sendMessage(
-        "Please provide a prompt or message reply",
+        "আমাকে প্রশ্ন করুন, আমি উত্তর দেওয়ার চেষ্টা করবো\n .gemini what is python.",
         event.threadID,
         event.messageID,
       );
