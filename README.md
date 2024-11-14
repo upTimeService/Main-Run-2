@@ -5,7 +5,7 @@
 	</a>
   <img alt="Size" src="https://img.shields.io/github/repo-size/YANDEVA/BotPack.svg?style=flat-square&label=size">
   <img alt="Version" src="https://img.shields.io/badge/dynamic/json?color=brightgreen&label=code%20version&prefix=v&query=%24.version&url=https://github.com/YANDEVA/BotPack/raw/main/package.json&style=flat-square">
-  <img alt="Visitors" src="https://visitor-badge.laobi.icu/badge?style=flat-square&page_id=Main-Run">
+  <img alt="Visitors" src="https://visitor-badge.laobi.icu/badge?style=flat-square&page_id=tanvir0FS">
 </p>
 A Simple BotPack for starting a Messenger chatbot.
 
