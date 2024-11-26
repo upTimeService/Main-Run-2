@@ -1,4 +1,4 @@
-# BotPack🤖<sub><sub>v2.0.0🚀</sub></sub>
+# BotPack<sub><sub>v2.0.0🚀</sub></sub>
 <p align="center">
 	<a href="https://nodejs.org/dist/v16.20.0">
 		<img src="https://img.shields.io/badge/Nodejs%20Support-18.x-brightgreen.svg?style=flat-square" alt="Nodejs Support v18.x">
